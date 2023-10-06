@@ -1,0 +1,23 @@
+name: first github action
+
+on: 
+    push: 
+        branches: 
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Set up go
+              uses: actions/setup-go@v4
+              with:
+                  go-version: 1.21.0
+
+            - name: check our code
+              uses: actions/checkout@v4
+
+            - name: run Test
+              uses: go test
+            
