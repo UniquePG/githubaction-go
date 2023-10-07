@@ -21,13 +21,13 @@ func TestRootHandler(t *testing.T) {
 
 	// Check the response status code
 	if rr.Code != http.StatusOK {
-		t.Errorf("expected status code %d but got %d", http.StatusOK, rr.Code)
+		t.Errorf("expected status code: %d but got: %d", http.StatusOK, rr.Code)
 	}
 
 	// Check the response body
 	expectedBody := "Hello from server"
 	if rr.Body.String() != expectedBody {
-		t.Errorf("expected response body %s but got %s", expectedBody, rr.Body.String())
+		t.Errorf("expected response body: %s, but got: %s", expectedBody, rr.Body.String())
 	}
 }
 func TestHelloHandler(t *testing.T) {

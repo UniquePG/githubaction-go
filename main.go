@@ -19,7 +19,7 @@ func main() {
 
 func RootHandler(w http.ResponseWriter, r *http.Request) {
 
-	fmt.Fprintf(w, "Hello from server")
+	fmt.Fprintf(w, "Hello from servernrohan")
 
 }
 
